@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<filter-conf>
+    <version>20221017</version>
+    <toggle>1</toggle>
+    <features>
+        <feature name="BindCore" enable="1">
+            <!-- big core index, start from 0 -->
+            <bigcore_id>4</bigcore_id>
+            <bigcore_id>5</bigcore_id>
+            <bigcore_id>6</bigcore_id>
+            <bigcore_id>7</bigcore_id>
+        </feature>
+
+        <feature name="DispKeventThread" enable="1"/>
+
+        <feature name="hecate" enable="1"/>
+
+        <feature name="curtain" enable="1">
+            <application name="com.google.android.youtube">
+                <scene type="FuzzyLayer">
+                    <layer>WatchWhileActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.snapchat.android">
+                <scene type="FuzzyLayer">
+                    <layer>LandingPageActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.instagram.android">
+                <scene type="FuzzyLayer">
+                    <layer>TransparentModalActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>MainActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+                <scene type="FuzzyLayer">
+                    <layer>ModalActivity</layer>
+                    <action>
+                        <mode>Normal</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.mxtech.videoplayer.ad">
+                <scene type="FuzzyLayer">
+                    <layer>ActivityScreen</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+            <application name="org.videolan.vlc">
+                <scene type="FuzzyLayer">
+                    <layer>VideoPlayerActivity</layer>
+                    <action>
+                        <mode>SurfaceView</mode>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+
+        <feature name="osie" enable="1">
+            <!-- osie start -->
+            <application name="com.google.android.youtube">
+                <scene type="ExactLayer">
+                    <layer>WatchWhileActivity</layer>
+                    <layer>WatchWhileActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.snapchat.android">
+                <scene type="ExactLayer">
+                    <layer>LandingPageActivity</layer>
+                    <layer>LandingPageActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>1</targetLayerIndex>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.instagram.android">
+                <scene type="ExactLayer">
+                    <layer>TransparentModalActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>MainActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>ModalActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+            </application>
+            <application name="com.mxtech.videoplayer.ad">
+                <scene type="ExactLayer">
+                    <layer>ActivityScreen</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>ActivityScreen</layer>
+                    <layer>ActivityScreen</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+            </application>
+            <application name="org.videolan.vlc">
+                <scene type="ExactLayer">
+                    <layer>VideoPlayerActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+                <scene type="ExactLayer">
+                    <layer>VideoPlayerActivity</layer>
+                    <layer>VideoPlayerActivity</layer>
+                    <action>
+                        <mode>AIPQ</mode>
+                        <targetLayerIndex>0</targetLayerIndex>
+                    </action>
+                </scene>
+            </application>
+        </feature>
+    </features>
+</filter-conf>

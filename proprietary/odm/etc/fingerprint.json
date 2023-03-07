@@ -1,0 +1,12 @@
+[
+    {
+        "project":"20827",
+        "name":"default",
+        "product":"DN2101IND",
+        "device":"OP515BL1",
+        "model":"DN2101",
+        "first_api_level":"30",
+        "manufacturer": "OnePlus",
+        "brand": "OnePlus"
+    }
+]
